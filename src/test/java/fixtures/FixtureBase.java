@@ -33,6 +33,10 @@ public class FixtureBase {
         return InputMessageGenerator.generateMessage(values);
     }
 
+    public InputMessage generateInputMessage(String values) {
+        return InputMessageGenerator.generateMessage(values);
+    }
+
     public String publishInputMessages(List<InputMessage> messages) {
         return InputStream.publishInputMessages(messages);
     }
