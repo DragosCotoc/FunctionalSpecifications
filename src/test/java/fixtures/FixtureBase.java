@@ -29,7 +29,7 @@ public class FixtureBase {
         inputMessagesList = new ArrayList<>();
     }
 
-    public InputMessage generateMessage(Map<String, String> values) {
+    public InputMessage generateInputMessage(Map<String, String> values) {
         return InputMessageGenerator.generateMessage(values);
     }
 

@@ -9,7 +9,7 @@ Given the input messages:
 |            2            |            12356          |             1             |       3        |         200            |
 |            3            |            12357          |             1             |       3        |          0             |
 
-[input]: - "#inputMsg=generateMessage(#{'messageId':#messageId,'versionId':#versionId,'rate':#rate,'quantity':#quantity})"
+[input]: - "#inputMsg=generateInputMessage(#{'messageId':#messageId,'versionId':#versionId,'rate':#rate,'quantity':#quantity})"
 [itemIM]: - "inputMessagesList.add(#inputMsg)"
 [messageIdIM]: - "#messageId"
 [versionIdIM]:  - "#versionId"
@@ -23,7 +23,7 @@ Then [consume](- "#outputMessages=consumeOutputMessages()") the output messages 
 |:------------------------:|:-------------------------:|:--------------------------:|:-----------------:|:-------------------:|
 |            1             |          12355            |             1              |       200         |     PROCESSED       |
 |            2             |          12356            |             1              |       600         |     PROCESSED       |
-|            3             |          12357            |             1              |        0          |     PROCESSED       |
+|            3             |          12357            |             1              |        0          |     UNPROCESSED     |
 
 [output]: - "#outputMsg=getOutputMessage(#outputMessages, #messageId)"
 [itemOM]: - "#itemOM"
